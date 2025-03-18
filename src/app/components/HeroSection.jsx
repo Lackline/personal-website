@@ -60,13 +60,18 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="relative flex items-center justify-center">
+            <div className="absolute w-[190px] h-[190px] lg:w-[450px] lg:h-[450px] rounded-full bg-gradient-to-br from-[#2DD4BF] to-transparent blur-3xl"></div>
             <Image
               src="/images/Victor_profile.png"
               alt="hero image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={400}
-              height={400}
+              className="relative rounded-full shadow-xl"
+              width={350}
+              height={350}
+              style={{
+                WebkitMaskImage: "radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)",
+                maskImage: "radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)",
+              }}
             />
           </div>
         </motion.div>
